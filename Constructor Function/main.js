@@ -37,3 +37,22 @@ class Account {
 const account = new Account();
 account.balance = 10000;
 account.balance; // 10000
+
+// extends
+class Person {
+  constructor(name, gender, age) {
+    this.name = name;
+    this.gender = gender;
+    this.age = age;
+  }
+}
+
+class Developer extends Person {
+  constructor(name, gender, age, position) {
+    super(name, gender, age);
+    this.position = position;
+  }
+}
+
+const developer = new Developer("nawhgnues", "male", 25, "FE");
+console.log(developer);
